@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Lâmpadas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles2.css">
+</head>
+<body>
+
+<div class="container mt-5"> <!-- Container Bootstrap -->
+
+    <h1 class="titulo text-center mb-4">Monitoramento de Lâmpadas Residenciais</h1>
+
+    <div class="row justify-content-center">
+
+        <!-- Lampada do Banheiro fluorecente -->
+        <div class="col-md-4 mb-5"> 
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Banheiro</h5>
+                    <img class="lampada card-img-top" id="banheiro" src="./img/fluorecente/fluorecente.jpg" alt="Lâmpada do Banheiro">
+                    <button class="btn btn-primary mt-3" onclick="toggleLampada('banheiro')">Banheiro</button>
+                </div>
+            </div>
+            <canvas class="grafico" id="graficoBanheiro" width="200" height="200"></canvas>
+        </div>
+
+        <!-- Lampada do Quarto Incandecente-->
+        <div class="col-md-4 mb-5">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Quarto</h5>
+                    <img class="lampada card-img-top" id="quarto" src="./img/incandecente/incandecente.jpg" alt="Lâmpada do Quarto">
+                    <button class="btn btn-primary mt-3" onclick="toggleLampada('quarto')">Quarto</button>
+                </div>
+            </div>
+            <canvas class="grafico" id="graficoQuarto" width="200" height="200"></canvas>
+        </div>
+
+        <!-- Lampada da Sala Led-->
+        <div class="col-md-4 mb-5"> 
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Sala</h5>
+                    <img class="lampada card-img-top" id="sala" src="./img/led/led.jpg" alt="Lâmpada da Sala">
+                    <button class="btn btn-primary mt-3" onclick="toggleLampada('sala')">Sala</button>
+                </div>
+            </div>
+            <canvas class="grafico" id="graficoSala" width="200" height="200"></canvas>
+        </div>
+
+        <!-- Lampada da Cozinha Led-->
+        <div class="col-md-4 mb-5"> 
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Cozinha</h5>
+                    <img class="lampada card-img-top" id="cozinha" src="./img/led/led.jpg" alt="Lâmpada da Cozinha">
+                    <button class="btn btn-primary mt-3" onclick="toggleLampada('cozinha')">Cozinha</button>
+                </div>
+            </div>
+            <canvas class="grafico" id="graficoCozinha" width="200" height="200"></canvas>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="/javaScript/lampada.js"></script>
+<script src="/javaScript/canva.js"></script>
+
+</body>
+</html>
